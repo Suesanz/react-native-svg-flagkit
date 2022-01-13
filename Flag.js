@@ -4,9 +4,9 @@
  * width : height = 21 : 15
  */
 import React, { Component } from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import { getFlagByDollarCode } from 'react-native-svg-flagkit'
+import { getFlagByDollarCode } from './utils'
 
 export default class Flag extends Component {
     static propTypes = {
@@ -24,30 +24,24 @@ export default class Flag extends Component {
         width: 210,
         height: 150
     };
+
     _renderIcon() {
-        const { size, width, height, id } = this.props
-        const flag = getFlagByDollarCode(id)
-        if (typeof flag === 'function') {
-            const SvgComponent = flag
-            return <SvgComponent width={width * size} height={height * size} />
-        }
-        return (
-            <Image
-                style={{ width: width * size, height: height * size }}
-                source={flag}
-            />
-        )
+        const {size, width, height, id} = this.props
+        const SvgComponent = getFlagByDollarCode(id)
+        return <SvgComponent width={width * size} height={height * size}/>
     }
+
     _onPress = () => {
         this.props.onPress && this.props.onPress(this.props.id)
     }
+
     render() {
         return (
             <TouchableOpacity
                 disabled={!this.props.onPress}
                 onPress={this._onPress}
             >
-                { this._renderIcon() }
+                {this._renderIcon()}
             </TouchableOpacity>
         )
     }
