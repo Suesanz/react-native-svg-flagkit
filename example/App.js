@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 // import TestFlagKit from './TestFlagKit'
 import { Flag } from 'react-native-svg-flagkit'
 
@@ -9,10 +9,10 @@ export default class App extends Component {
     return (
       // <TestFlagKit />
       <View>
-        <Flag 
+        <Flag
             id={'TW'}
         />
-        <Flag 
+        <Flag
             id={'US'}
             size={0.2}
         />

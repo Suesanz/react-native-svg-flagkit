@@ -45,12 +45,12 @@ export default class App extends Component {
 
 ## Props
 
-| Prop | Type | Default | Note |
-|---|---|---|---|
-| `size` | `number` | 1 | scale from default with, height
-| `width` | `number` | 210 | SVG or Image width
-| `height` | `number` | 150 | SVG or Image width
-| `onPress` | `function` | | Press flag event
+| Prop      | Type       | Default | Note                            |
+|-----------|------------|---------|---------------------------------|
+| `size`    | `number`   | 1       | scale from default with, height |
+| `width`   | `number`   | 210     | SVG or Image width              |
+| `height`  | `number`   | 150     | SVG or Image width              |
+| `onPress` | `function` |         | Press flag event                |
 
 ## Run example
 
@@ -59,15 +59,6 @@ git clone git@github.com:jackmew/react-native-svg-flagkit.git
 cd example
 npm install
 ```
-
-## Run react-native-svg-flatkit/example/TestFlagKit.js
-
-<div align="center">
-    <img src="https://github.com/jackmew/react-native-svg-flagkit/blob/master/screenshot/flagKitDemo.png?raw=true" 
-    height="609" width="281"
-    />
-</div>
-
 
 ## Todo
 - [ ] Square Flag

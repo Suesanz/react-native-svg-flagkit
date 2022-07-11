@@ -28,6 +28,9 @@ export default class Flag extends Component {
     _renderIcon() {
         const {size, width, height, id} = this.props
         const SvgComponent = getFlagByDollarCode(id)
+        if(!id || !SvgComponent) {
+           throw new Error(`Invalid flag code ${id}`)
+        }
         return <SvgComponent width={width * size} height={height * size}/>
     }
 
